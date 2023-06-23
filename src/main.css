@@ -1,5 +1,5 @@
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -7,18 +7,16 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: hidden;
   word-wrap: normal;
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+}
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
 }
 
 body {
   position: relative;
-  background-color: $mainColorWhite;
-
+  background-color: var(--mainBgColorWhite);
   min-height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -54,4 +52,4 @@ a {
 
 button {
   cursor: pointer;
-}
+}/*# sourceMappingURL=main.css.map */

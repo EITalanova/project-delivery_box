@@ -1,0 +1,40 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.homeTitle {
+  margin-bottom: 12px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.homeDiscription {
+  margin-bottom: 68px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.homeOptionsBox {
+  display: flex;
+  gap: 60px;
+}
+
+.homeOption {
+  overflow: hidden;
+  width: 436px;
+  height: 402px;
+  border-radius: 20px;
+}
+
+.homeOptionsText {
+  width: 100%;
+  padding: 20px 82px;
+
+  font-size: 20px;
+
+  text-align: center;
+  font-weight: 700;
+  line-height: 128%;
+  text-transform: uppercase;
+  color: $mainColorWhite;
+  background-color: $aсcentColor;
+}

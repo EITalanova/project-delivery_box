@@ -1,0 +1,25 @@
+.successBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.successImg {
+  width: 300px;
+}
+@media screen and (min-width: 768px) {
+  .successImg {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .successImg {
+    width: 400px;
+  }
+}
+
+.btnNavigateBox {
+  display: flex;
+  gap: 70px;
+} /*# sourceMappingURL=successInformation.module.css.map *//*# sourceMappingURL=Success.module.css.map */

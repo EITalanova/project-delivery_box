@@ -3,10 +3,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 44px;
-  padding-right: 48px;
+  padding-left: 14px;
+  padding-right: 18px;
   height: 74px;
   border-bottom: 4px solid rgb(230, 230, 230);
+}
+@media screen and (min-width: 768px) {
+  .headerContainer {
+    padding-left: 34px;
+    padding-right: 38px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .headerContainer {
+    padding-left: 44px;
+    padding-right: 48px;
+  }
 }
 .headerContainer::after {
   content: "";
@@ -15,20 +27,75 @@
   left: 0;
   width: 360px;
   height: 4px;
-  background: linear-gradient(90deg, #011461 0%, #032EDD 100%);
+  background: linear-gradient(90deg, #011461 0%, #032edd 100%);
 }
 
 .headerLogo {
-  width: 118px;
-  height: 24px;
+  display: flex;
+  padding: 20px 0;
+  width: 75px;
+  align-items: center;
+  fill: rgb(0, 0, 0);
+  transition: fill 300ms ease;
+}
+@media screen and (min-width: 768px) {
+  .headerLogo {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .headerLogo {
+    width: 118px;
+  }
+}
+.headerLogo:hover, .headerLogo:focus {
+  fill: rgb(3, 46, 221);
 }
 
 .headerMenu {
   display: flex;
-  gap: 44px;
-  align-items: center;
+  gap: 20px;
+  align-items: flex-end;
   color: rgb(87, 86, 94);
-  font-size: 16px;
+  font-family: Montserrat;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+@media screen and (min-width: 768px) {
+  .headerMenu {
+    gap: 35px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .headerMenu {
+    gap: 44px;
+    font-size: 16px;
+  }
+}
+
+.headerMenuLinkGrey {
+  padding: 20px 0;
+  color: rgb(87, 86, 94);
+  transition: color 300ms ease;
+}
+.headerMenuLinkGrey:hover, .headerMenuLinkGrey:focus {
+  color: rgb(3, 46, 221);
+}
+
+.headerMenuLink {
+  padding: 20px 0;
+  color: rgb(3, 46, 221);
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .headerMenuLink {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .headerMenuLink {
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=Header.module.css.map */

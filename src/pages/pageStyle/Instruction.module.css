@@ -1,0 +1,16 @@
+.instructionList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 30px;
+  font-family: Roboto;
+  line-height: 1.2857142857;
+  font-size: 12px;
+  text-align: justify;
+}
+@media screen and (min-width: 1200px) {
+  .instructionList {
+    line-height: 18px;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=Instruction.module.css.map */

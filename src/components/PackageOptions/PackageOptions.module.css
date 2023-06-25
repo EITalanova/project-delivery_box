@@ -1,30 +1,63 @@
-.packageTitle {
-  margin-bottom: 71px;
-  font-size: 20px;
-  font-weight: 500;
-}
-
 .packageBox {
   display: flex;
   align-items: center;
-  gap: 56px;
-  margin-bottom: 100px;
+  gap: 30px;
+  margin-top: 71px;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .packageBox {
+    margin-bottom: 100px;
+    gap: 46px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .packageBox {
+    gap: 66px;
+  }
 }
 
 .packageImg {
-  height: 144px;
+  height: 104px;
+}
+@media screen and (min-width: 768px) {
+  .packageImg {
+    height: 134px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .packageImg {
+    height: 144px;
+  }
 }
 
 .packageInstruction {
   display: flex;
   flex-direction: column;
   padding: 0 2px;
-  justify-content: space-between;
-  width: 351px;
-  height: 88px;
-  font-size: 14px;
+  justify-content: center;
+  gap: 10px;
+  text-align: justify;
+  width: 200px;
+  font-size: 10px;
   font-family: Roboto;
   line-height: 1.2857142857;
+}
+@media screen and (min-width: 768px) {
+  .packageInstruction {
+    justify-content: space-between;
+    gap: 0;
+    width: 331px;
+    height: 88px;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .packageInstruction {
+    width: 331px;
+    height: 88px;
+    font-size: 14px;
+  }
 }
 
 .btnConfirm {

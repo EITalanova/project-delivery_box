@@ -1,12 +1,11 @@
-
-import { PackageOptions } from "components/PackageOptions/PackageOptions";
+import { PackageOptions } from 'components/PackageOptions/PackageOptions';
 
 const Packed = () => {
   return (
     <>
-     <PackageOptions />
-        </>
-    );
+      <PackageOptions />
+    </>
+  );
 };
 
 export default Packed;

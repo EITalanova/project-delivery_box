@@ -1,16 +1,16 @@
 import boxImg from '../../assets/images/box.png';
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
+import { Title } from 'components/Title/Title';
+import { DEVICE_UID } from 'api';
 
 import style from './PackageOptions.module.scss';
 
 export const PackageOptions = () => {
   return (
     <>
-      <h2 className={style.packageTitle}>
-        Відправлення має бути надійно упаковане
-      </h2>
+      <Title text="Відправлення має бути надійно упаковане" />
       <div className={style.packageBox}>
-        <img src={boxImg} alt="Box image" className={style.packageImg} />
+        <img src={boxImg} alt="Box" className={style.packageImg} />
         <ol className={style.packageInstruction}>
           <li>
             Упакуйте товар у коробку чи пакет. На упаковці не повинно бути
@@ -23,14 +23,12 @@ export const PackageOptions = () => {
         </ol>
       </div>
 
-
-        <ButtonNavigate
-          className={style.btnNavigateBox}
-          pathBtnBack="/:device_uid"
-          pathBtnNext="/:device_uid/cellsize"
-          textBtnNext="Я ДОБРЕ УПАКОВАВ"
-        />
-
+      <ButtonNavigate
+        className={style.btnNavigateBox}
+        pathBtnBack="/"
+        pathBtnNext={`/${DEVICE_UID}/cellsize`}
+        textBtnNext="Я ДОБРЕ УПАКОВАВ"
+      />
     </>
   );
 };

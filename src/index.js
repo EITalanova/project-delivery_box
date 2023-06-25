@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { store } from 'redux/deviceInfo/store';
 import { persistor } from 'redux/deviceInfo/store';
 import { PersistGate } from 'redux-persist/integration/react';import { App } from 'App';
-import './main.scss';
+import './sass/main.scss';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

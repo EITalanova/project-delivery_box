@@ -1,0 +1,19 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.instructionList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 30px;
+
+  font-family: Roboto;
+  line-height: calc(18 / 14);
+  font-size: 12px;
+  text-align: justify;
+
+  @include desktop {
+    line-height: 18px;
+    font-size: 14px;
+  }
+}

@@ -1,31 +1,87 @@
-.selectCellTitle {
-  margin-bottom: 71px;
-  font-size: 20px;
-  font-weight: 500;
+.selectCellBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .selectCellBox {
+    width: 770px;
+  }
 }
 
 .cellBox {
-  display: grid;
+  display: flex;
+  align-items: center;
   margin-bottom: 52px;
+  width: 100%;
+  flex-wrap: no-wrap;
   flex-direction: column;
-  flex-wrap: wrap;
-  grid-template-columns: 186px 240px 304px;
+  align-items: center;
   gap: 20px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .cellBox {
+    flex-wrap: wrap;
+    height: 368px;
+  }
 }
 
 .cellEll {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  padding: 16px;
+  padding-left: 16px;
   border-radius: 4px;
-  border: 1px solid #cecece;
+  background-color: transparent;
   box-shadow: 0px 0px 6px 0px rgba(85, 115, 133, 0.4);
-  grid-row-start: span 1;
+  font-family: Montserrat;
+  cursor: pointer;
+  transition: box-shadow 300ms ease;
+}
+.cellEll:hover, .cellEll:focus {
+  box-shadow: 0px 0px 6px 0px rgb(3, 46, 221);
+}
+
+.cellTextTitle {
+  color: rgb(3, 46, 221);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cellTextDiscription {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cellEllNotAvailable {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-left: 16px;
+  border-radius: 4px;
+  background-color: rgba(244, 3, 128, 0.037);
+  box-shadow: 0px 0px 4px 0px rgba(167, 89, 89, 0.4);
+  pointer-events: none;
+  cursor: default;
+}
+
+.cellEllIsChoice {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-left: 16px;
+  border-radius: 4px;
+  background-color: rgba(0, 204, 51, 0.2352941176);
+  border: 2px solid rgb(3, 46, 221);
+  box-shadow: 0px 0px 6px 0px rgb(3, 46, 221);
+  cursor: pointer;
 }
 
 .cellTextBox {
   display: flex;
+  padding-top: 20px;
   flex-direction: column;
   align-self: flex-start;
   gap: 0;
@@ -33,5 +89,7 @@
 
 .btnNavigateBox {
   display: flex;
-  gap: 334px;
+  gap: 10px;
+  min-width: 100%;
+  justify-content: space-between;
 }/*# sourceMappingURL=SelectCellSizes.module.css.map */

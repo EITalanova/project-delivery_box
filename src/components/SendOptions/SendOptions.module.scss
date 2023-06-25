@@ -17,22 +17,6 @@
   }
 }
 
-.homeDiscription {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: 500;
-
-  @include tablet {
-    margin-bottom: 50px;
-    font-size: 18px;
-  }
-
-  @include desktop {
-    margin-bottom: 68px;
-    font-size: 20px;
-  }
-}
-
 .homeOptionsBox {
   display: flex;
   flex-direction: column;
@@ -40,6 +24,7 @@
   align-items: center;
   width: 100%;
   gap: 40px;
+  margin-top: 68px;
 
   @include tablet {
     flex-direction: row;

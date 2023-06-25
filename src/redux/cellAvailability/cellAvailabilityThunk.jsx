@@ -8,7 +8,6 @@ export const fetchCellAvailability = createAsyncThunk(
       const res = await axios.get(
         `/api/2.0.0/public/orders/device/${device_uid}/cells/statuses/?type=5`
       );
-      console.log({ data: res.data });
       return { data: res.data };
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

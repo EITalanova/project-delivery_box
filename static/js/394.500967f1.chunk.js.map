@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/394.500967f1.chunk.js","mappings":"yLAAaA,EAAS,WACpB,OACM,uBAGP,C","sources":["pages/Packed.jsx"],"sourcesContent":["export const Packed = () => {\n  return (\n        <>\n        </>\n    );\n};"],"names":["Packed"],"sourceRoot":""}

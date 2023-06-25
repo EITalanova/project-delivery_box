@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/261.9e23546b.chunk.js","mappings":"2LAAaA,EAAW,WACtB,OACM,uBAGP,C","sources":["pages/CellSize.jsx"],"sourcesContent":["export const CellSize = () => {\n  return (\n        <>\n        </>\n    );\n};\n"],"names":["CellSize"],"sourceRoot":""}

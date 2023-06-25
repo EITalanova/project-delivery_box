@@ -2,39 +2,95 @@
 @import '../../sass/mixins';
 
 .homeTitle {
-  margin-bottom: 12px;
-  font-size: 32px;
+  margin-bottom: 8px;
+  font-size: 22px;
   font-weight: 600;
+
+  @include tablet {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 12px;
+    font-size: 32px;
+  }
 }
 
 .homeDiscription {
-  margin-bottom: 68px;
-  font-size: 20px;
+  margin-bottom: 40px;
+  font-size: 16px;
   font-weight: 500;
+
+  @include tablet {
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
+
+  @include desktop {
+    margin-bottom: 68px;
+    font-size: 20px;
+  }
 }
 
 .homeOptionsBox {
   display: flex;
-  gap: 60px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 60px;
+  }
 }
 
 .homeOption {
   overflow: hidden;
-  width: 436px;
-  height: 402px;
+  width: 336px;
   border-radius: 20px;
+  transition: box-shadow 300ms ease;
+
+  @include tablet {
+    width: 400px;
+  }
+
+  @include desktop {
+    width: 436px;
+    // height: 402px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 255, 0.5);
+  }
 }
 
 .homeOptionsText {
   width: 100%;
-  padding: 20px 82px;
+  padding: 10px 42px;
 
-  font-size: 20px;
-
+  font-size: 12px;
   text-align: center;
   font-weight: 700;
   line-height: 128%;
   text-transform: uppercase;
   color: $mainColorWhite;
   background-color: $aсcentColor;
+
+  @include tablet {
+    padding: 18px 62px;
+
+    font-size: 18px;
+  }
+
+  @include desktop {
+    padding: 20px 82px;
+
+    font-size: 20px;
+  }
 }

@@ -35,12 +35,13 @@ p {
   margin: 0;
 }
 
-ul,
-li,
-ol {
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+ol {
+  margin: 0;
 }
 
 img {
@@ -55,4 +56,9 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.active {
+  color: $aсcentColor;
+
 }

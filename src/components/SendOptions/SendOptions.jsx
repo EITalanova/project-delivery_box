@@ -20,7 +20,7 @@ export const SendOptions = () => {
           </Link>
         </li>
         <li className={style.homeOption}>
-          <Link to="" className={style.homeOptionsLink}>
+          <Link to="*" className={style.homeOptionsLink}>
             <img src={packageImg} alt="Send option image" />
             <p className={style.homeOptionsText}>
               Повернення до інтернет магазину

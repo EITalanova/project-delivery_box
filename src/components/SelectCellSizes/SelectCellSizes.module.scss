@@ -1,58 +1,104 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.selectCellBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    width: 770px;
+  }
+}
+
 .selectCellTitle {
-  margin-bottom: 71px;
-  font-size: 20px;
+  text-align: center;
+  margin-bottom: 41px;
+  font-size: 16px;
   font-weight: 500;
+
+  @include tablet {
+    margin-bottom: 51px;
+    font-size: 18px;
+  }
+
+  @include desktop {
+    margin-bottom: 71px;
+    font-size: 20px;
+  }
 }
 
 .cellBox {
   display: flex;
+  align-items: center;
   margin-bottom: 52px;
   width: 100%;
-
+  flex-wrap: no-wrap;
   flex-direction: column;
-  flex-wrap: wrap;
-  height: 368px;
+  align-items: center;
   gap: 20px;
+
+  @include desktop {
+    flex-wrap: wrap;
+    height: 368px;
+  }
 }
 
 .cellEll {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   align-items: center;
-
   padding-left: 16px;
+
   border-radius: 4px;
   background-color: transparent;
-  box-shadow: 0px 0px 6px 0px rgba(133, 85, 85, 0.4);
+  box-shadow: 0px 0px 6px 0px rgba(85, 115, 133, 0.4);
+  font-family: Montserrat;
   cursor: pointer;
+  transition: box-shadow 300ms ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 6px 0px $aсcentColor;
+  }
+}
+
+.cellTextTitle {
+  color: $aсcentColor;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cellTextDiscription {
+  color: $mainTextColor;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .cellEllNotAvailable {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   align-items: center;
-
   padding-left: 16px;
+
   border-radius: 4px;
-  background-color: rgba(244, 3, 128, 0.081);
-  box-shadow: 0px 0px 6px 0px rgba(133, 85, 85, 0.4);
+  background-color: rgba(244, 3, 128, 0.037);
+  box-shadow: 0px 0px 4px 0px rgba(167, 89, 89, 0.4);
   pointer-events: none;
   cursor: default;
 }
 
 .cellEllIsChoice {
   display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  
-    align-items: center;
-  
-    padding-left: 16px;
-    border-radius: 4px;
-    background-color: #00cc33c7;
-    box-shadow: 0px 0px 6px 0px rgba(85, 133, 99, 0.4);
-    cursor: pointer;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-left: 16px;
+
+  border-radius: 4px;
+  background-color: #00cc333c;
+  border: 2px solid $aсcentColor;
+  box-shadow: 0px 0px 6px 0px $aсcentColor;
+  cursor: pointer;
 }
 
 .cellTextBox {
@@ -65,5 +111,7 @@
 
 .btnNavigateBox {
   display: flex;
-  gap: 334px;
+  gap: 10px;
+  min-width: 100%;
+  justify-content: space-between;
 }

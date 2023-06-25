@@ -6,11 +6,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 44px;
-  padding-right: 48px;
+  padding-left: 14px;
+  padding-right: 18px;
   height: 74px;
 
   border-bottom: 4px solid $lightGreyColor;
+
+  @include tablet {
+    padding-left: 34px;
+    padding-right: 38px;
+  }
+
+  @include desktop {
+    padding-left: 44px;
+    padding-right: 48px;
+  }
 
   &::after {
     content: '';
@@ -19,22 +29,76 @@
     left: 0;
     width: 360px;
     height: 4px;
-    background: linear-gradient(90deg, #011461 0%, #032EDD 100%);
+    background: linear-gradient(90deg, #011461 0%, #032edd 100%);
   }
 }
 
 .headerLogo {
-  width: 118px;
-  height: 24px;
+  display: flex;
+  padding: 20px 0;
+  width: 75px;
+  align-items: center;
+  fill: $mainTextColor;
+
+  transition: fill 300ms ease;
+
+  @include tablet {
+    width: 100px;
+  }
+
+  @include desktop {
+    width: 118px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $aсcentColor;
+  }
 }
 
 .headerMenu {
   display: flex;
-  gap: 44px;
-  align-items: center;
+  gap: 20px;
+  align-items: flex-end;
 
   color: $greyColor;
-  font-size: 16px;
+  font-family: Montserrat;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 1px;
+
+  @include tablet {
+    gap: 35px;
+    font-size: 14px;
+  }
+
+  @include desktop {
+    gap: 44px;
+    font-size: 16px;
+  }
+}
+
+.headerMenuLinkGrey {
+  padding: 20px 0;
+  color: $greyColor;
+  transition: color 300ms ease;
+
+  &:hover,
+  &:focus {
+    color: $aсcentColor;
+  }
+}
+
+.headerMenuLink {
+  padding: 20px 0;
+  color: $aсcentColor;
+  font-size: 12px;
+
+  @include tablet {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    font-size: 22px;
+  }
 }

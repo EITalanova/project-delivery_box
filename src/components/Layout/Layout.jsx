@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-import { Watch } from 'react-loader-spinner';
+import { RotatingLines } from 'react-loader-spinner';
 
 import { Header } from '../Header/Header';
 
@@ -18,7 +18,7 @@ export const Layout = () => {
     <>
       <Header />
       <div className={style.generalСontainer}>
-      <Suspense fallback={<Watch />}>
+      <Suspense fallback={<RotatingLines strokeColor="grey"/>}>
         
           <Outlet />
          

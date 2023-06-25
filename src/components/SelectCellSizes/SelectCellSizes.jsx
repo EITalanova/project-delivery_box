@@ -2,6 +2,9 @@ import { NavLink, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { selectCellAvailability } from 'redux/cellAvailability/cellAvailabilitySelector';
+import { fetchCellAvailability } from 'redux/cellAvailability/cellAvailabilityThunk';
+
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
 
 import cellS from '../../assets/images/cellS.png';
@@ -12,11 +15,9 @@ import cellXXS from '../../assets/images/cellXXS.png';
 import cellXXXL from '../../assets/images/cellXXXL.png';
 import cellXXL from '../../assets/images/cellXXL.png';
 import cellXL from '../../assets/images/cellXL.png';
-// import { ReactComponent as CellS } from '../../assets/icon/cellXS.svg';
 
 import style from './SelectCellSizes.module.scss';
-import { selectCellAvailability } from 'redux/cellAvailability/cellAvailabilitySelector';
-import { fetchCellAvailability } from 'redux/cellAvailability/cellAvailabilityThunk';
+
 
 export const SelectCellSizes = () => {
   const { device_uid } = useParams();
@@ -92,7 +93,7 @@ export const SelectCellSizes = () => {
   console.log(choiceCell);
 
   return (
-    <>
+    <div className={style.selectCellBox}>
       <h2 className={style.selectCellTitle}>Оберіть розмір посилки</h2>
 
       <ul className={style.cellBox}>
@@ -138,10 +139,10 @@ export const SelectCellSizes = () => {
 
       <ButtonNavigate
         pathBtnBack="/packed"
-        pathBtnNext={choiceCell ? '#' : 'null'}
+        pathBtnNext={choiceCell ? ':device_uid/success' : 'null'}
         textBtnNext={choiceCell ? "ПІДТВЕРДИТИ" : "СПОЧАТКУ ОБЕРІТЬ РОЗМІР"}
         className={style.btnNavigateBox}
       />
-    </>
+    </div>
   );
 };

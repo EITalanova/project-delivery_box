@@ -1,11 +1,12 @@
-import { NavLink, useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NavLink, Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { ReactComponent as Logo } from '../../assets/icon/logo.svg';
+import { fetchDeviceInfo } from 'redux/deviceInfo/deviceThunk';
 import { selectDeviceInfo } from 'redux/deviceInfo/deviceSelector';
 
+import { ReactComponent as Logo } from '../../assets/icon/logo.svg';
+
 import style from './Header.module.scss';
-import { useState, useEffect } from 'react';
-import { fetchDeviceInfo } from 'redux/deviceInfo/deviceThunk';
 
 export const Header = () => {
   const { device_uid } = useParams();
@@ -27,13 +28,28 @@ export const Header = () => {
 
   return (
     <div className={style.headerContainer}>
-      <NavLink to="/">
-        <Logo className={style.headerLogo} />
+      <NavLink to="/" className={style.headerLogo}>
+        <Logo />
       </NavLink>
-      <ul className={style.headerMenu}>
-        <li className={style.headerMenuEll}>ІНСТРУКЦІЯ</li>
-        <li className={style.headerMenuEll}>{`Поштомат №${deviceInfo}`}</li>
-      </ul>
+      <nav>
+        <ul className={style.headerMenu}>
+          <li>
+            <NavLink
+              activeClassName={style.active}
+              className={style.headerMenuLinkGrey}
+              to={'instruction'}
+            >
+              ІНСТРУКЦІЯ
+            </NavLink>
+          </li>
+          <li>
+            <Link
+              className={style.headerMenuLink}
+              to={'/:device_uid'}
+            >{`Поштомат №${deviceInfo}`}</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

@@ -1,0 +1,51 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.errorTitle {
+  text-align: center;
+  margin-bottom: 41px;
+  font-size: 16px;
+  font-weight: 500;
+
+  @include tablet {
+    margin-bottom: 51px;
+    font-size: 18px;
+  }
+
+  @include desktop {
+    margin-bottom: 71px;
+    font-size: 20px;
+  }
+}
+
+.errorImg {
+  width: 300px;
+
+  @include tablet {
+    width: 350px;
+  }
+
+  @include desktop {
+    width: 400px;
+  }
+}
+
+.btnNavigateBox {
+  display: flex;
+  gap: 20px;
+
+  @include tablet {
+    gap: 50px;
+  }
+
+  @include desktop {
+    gap: 70px;
+  }
+} /*# sourceMappingURL=ErrorInformation.module.css.map */

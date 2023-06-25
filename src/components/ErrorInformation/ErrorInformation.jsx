@@ -7,7 +7,7 @@ const ErrorInformation = () => {
   return (
     <div className={style.errorBox}>
       
-      <h2 className={style.errorTitle}>Нажаль, нічого не знайдено</h2>
+      <h2 className={style.errorTitle}>Нажаль, ця опція наразі не є доступною :(</h2>
       <img src={errorImg} alt="error" />
 
       <ButtonNavigate

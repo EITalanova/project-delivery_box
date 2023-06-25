@@ -1,0 +1,23 @@
+.btn {
+  color: rgb(3, 46, 221);
+  padding: 17px 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 128%;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.btnBack {
+  padding-left: 51px;
+  padding-right: 51px;
+  border: 2px solid rgb(3, 46, 221);
+  background-color: rgb(255, 255, 255);
+}
+
+.btnNext {
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: rgb(3, 46, 221);
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=ButtonNavigate.module.css.map */

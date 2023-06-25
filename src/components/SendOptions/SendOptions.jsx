@@ -12,15 +12,19 @@ export const SendOptions = () => {
       <h2 className={style.homeDiscription}>Що відправлятимемо сьогодні?</h2>
       <ul className={style.homeOptionsBox}>
         <li className={style.homeOption}>
-          <Link href="" className={style.homeOptionsLink}>
+          <Link to="/:device_uid/packed" className={style.homeOptionsLink}>
             <img src={postamatImg} alt="Send option image" />
-            <p className={style.homeOptionsText}>Надіслати посилку через поштомат</p>
+            <p className={style.homeOptionsText}>
+              Надіслати посилку через поштомат
+            </p>
           </Link>
         </li>
         <li className={style.homeOption}>
-          <Link href="#" className={style.homeOptionsLink}>
+          <Link to="" className={style.homeOptionsLink}>
             <img src={packageImg} alt="Send option image" />
-            <p className={style.homeOptionsText}>Повернення до інтернет магазину</p>
+            <p className={style.homeOptionsText}>
+              Повернення до інтернет магазину
+            </p>
           </Link>
         </li>
       </ul>

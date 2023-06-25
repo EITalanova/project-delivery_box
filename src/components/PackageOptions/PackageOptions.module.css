@@ -1,0 +1,38 @@
+.packageTitle {
+  margin-bottom: 71px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.packageBox {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 100px;
+}
+
+.packageImg {
+  height: 144px;
+}
+
+.packageInstruction {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2px;
+  justify-content: space-between;
+  width: 351px;
+  height: 88px;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 1.2857142857;
+}
+
+.btnConfirm {
+  background-color: rgb(3, 46, 221);
+  color: rgb(255, 255, 255);
+}
+
+.btnNavigateBox {
+  display: flex;
+  gap: 60px;
+}/*# sourceMappingURL=PackageOptions.module.css.map */

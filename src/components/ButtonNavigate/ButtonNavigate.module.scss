@@ -1,0 +1,27 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.btn {
+  color: $aсcentColor;
+  padding: 17px 0;
+  font-size: 20px;
+
+  font-weight: 700;
+  line-height: 128%;
+  text-transform: uppercase;
+
+  border-radius: 4px;
+}
+
+.btnBack {
+  padding-left: 51px;
+  padding-right: 51px;
+  border: 2px solid $aсcentColor;
+  background-color: $mainColorWhite;
+}
+.btnNext {
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: $aсcentColor;
+  color: $mainColorWhite;
+}

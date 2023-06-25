@@ -1,9 +1,9 @@
-import React from 'react';
+import { SelectCellSizes } from "components/SelectCellSizes/SelectCellSizes";
 
 const CellSize = () => {
   return (
     <>
-      <div>ddggddd</div>
+      <SelectCellSizes/>
         </>
     );
 };

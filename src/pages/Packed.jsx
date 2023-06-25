@@ -1,7 +1,10 @@
+
+import { PackageOptions } from "components/PackageOptions/PackageOptions";
+
 const Packed = () => {
   return (
     <>
-      <div>ddddd</div>
+     <PackageOptions />
         </>
     );
 };

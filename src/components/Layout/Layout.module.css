@@ -1,1 +1,9 @@
-/*# sourceMappingURL=Layout.module.css.map */
+@charset "UTF-8";
+.generalСontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+  padding-left: 44px;
+  padding-right: 48px;
+}/*# sourceMappingURL=Layout.module.css.map */

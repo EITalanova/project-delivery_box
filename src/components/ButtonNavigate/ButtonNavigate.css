@@ -1,0 +1,16 @@
+.btnToBack {
+  color: rgb(3, 46, 221);
+  padding: 17px 51px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 128%;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: 2px solid rgb(3, 46, 221);
+  background: rgb(255, 255, 255);
+}
+
+.ddd {
+  padding: 10px;
+  background-color: red;
+}/*# sourceMappingURL=Button.module.css.map */

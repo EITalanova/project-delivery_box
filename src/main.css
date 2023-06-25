@@ -1,5 +1,5 @@
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -16,7 +16,7 @@ html *::after {
 
 body {
   position: relative;
-  background-color: var(--mainBgColorWhite);
+  background-color: rgb(255, 255, 255);
   min-height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -34,7 +34,8 @@ p {
 }
 
 ul,
-li {
+li,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;

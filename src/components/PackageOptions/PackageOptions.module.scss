@@ -1,0 +1,41 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.packageTitle {
+  margin-bottom: 71px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.packageBox {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 100px;
+}
+
+.packageImg {
+  height: 144px;
+}
+
+.packageInstruction {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2px;
+  justify-content: space-between;
+  width: 351px;
+  height: 88px;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: calc(18 / 14);
+}
+
+.btnConfirm {
+  background-color: $aсcentColor;
+  color: $mainColorWhite;
+}
+
+.btnNavigateBox {
+  display: flex;
+  gap: 60px;
+}

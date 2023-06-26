@@ -12,7 +12,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { deviceReducer } from "./deviceSlice";
-import { cellAvailabilityReducer } from "redux/cellAvailability/cellAvailabilitySlice";
+import { cellAvailabilityReducer } from "../cellAvailability/cellAvailabilitySlice";
 
 const devicePersistConfig = {
     key: 'deviceName',

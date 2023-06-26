@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchCellAvailability } from "./cellAvailabilityThunk";
 
 const initialState = {
-    cellAvailability: {},
+    cellAvailability: [],
     isLoading: false,
 }
 
 const cellAvailabilitySlice = createSlice({
-    name: 'cell',
+    name: 'cellAvailability',
     initialState,
     reducers: {},
     extraReducers: builder =>
@@ -16,7 +16,7 @@ const cellAvailabilitySlice = createSlice({
         state.isLoading = true;
       })
         .addCase(fetchCellAvailability.fulfilled, (state, { payload }) => {
-          
+          console.log(payload.data)
         state.cellAvailability = payload.data;
           state.isLoading = false;
 

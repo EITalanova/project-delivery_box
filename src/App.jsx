@@ -12,7 +12,6 @@ const Error = lazy(() => import('./pages/Error'));
 const Success = lazy(() => import('./pages/Success'));
 
 
-
 export const App = () => {
   return (
     <>

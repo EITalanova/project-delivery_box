@@ -16,7 +16,7 @@ const deviceSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(fetchDeviceInfo.fulfilled, (state, { payload }) => {
-        state.deviceInfo = payload.data;
+        state.deviceName = payload.data;
         state.isLoading = false;
       })
       .addCase(fetchDeviceInfo.rejected, (state, { payload }) => {

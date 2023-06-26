@@ -1,8 +1,8 @@
 # **project-delivery_box**
 
-The project was carried out on the basis **Create React App**
-**Command to run** a project in development mode: npm start
-**Page** to view in a browser: http://localhost:3000
+The project was carried out on the basis **Create React App** </br>
+**Command to run** a project in development mode: npm start</br>
+**Page** to view in a browser: http://localhost:3000</br>
 
 **The following technologies were used:**
 - React

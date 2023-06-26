@@ -1,19 +1,15 @@
 import { useState, useEffect } from 'react';
-import {
-  useDispatch,
-  useSelector
-} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { DEVICE_UID } from 'api';
+
 import { selectCellAvailability } from '../../redux/cellAvailability/cellAvailabilitySelector';
 import { fetchCellAvailability } from '../../redux/cellAvailability/cellAvailabilityThunk';
 
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
 import { Title } from 'components/Title/Title';
 import { handlerCellData, sizeMappings } from 'utilites/handlerCellUtils';
-
+import { DEVICE_UID } from 'api';
 import style from './SelectCellSizes.module.scss';
-
 
 export const SelectCellSizes = () => {
   const dispatch = useDispatch();
@@ -26,9 +22,11 @@ export const SelectCellSizes = () => {
   console.log(cell_types);
 
   useEffect(() => {
+ 
     setCellAvailability(cell_types);
     setId(DEVICE_UID);
-  }, [id, cell_types]);
+  // eslint-disable-next-line
+  }, [DEVICE_UID, cell_types]);
 
   useEffect(() => {
     dispatch(fetchCellAvailability(id));
@@ -39,11 +37,10 @@ export const SelectCellSizes = () => {
   };
 
   return (
-    
     <div className={style.selectCellBox}>
       <Title text="Оберіть розмір посилки" />
 
-       <ul className={style.cellBox}>
+       {cellAvailability && (<ul className={style.cellBox}>
         {handlerCellData(cellAvailability, sizeMappings).map(
           ({
             type,
@@ -82,14 +79,14 @@ export const SelectCellSizes = () => {
             </li>
           )
         )}
-      </ul>  
+      </ul>)}
 
       <ButtonNavigate
         pathBtnBack={`/${DEVICE_UID}/packed`}
-        pathBtnNext={choiceCell ? `/${DEVICE_UID}/success`: '#'}
-        textBtnNext={choiceCell ? "ПІДТВЕРДИТИ" : "СПОЧАТКУ ОБЕРІТЬ РОЗМІР"}
+        pathBtnNext={choiceCell ? `/${DEVICE_UID}/success` : '#'}
+        textBtnNext={choiceCell ? 'ПІДТВЕРДИТИ' : 'СПОЧАТКУ ОБЕРІТЬ РОЗМІР'}
         className={style.btnNavigateBox}
-      /> 
+      />
     </div>
   );
 };

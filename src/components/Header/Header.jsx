@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link, useParams } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDeviceInfo } from 'redux/deviceInfo/deviceThunk';
 import { selectDeviceInfo } from '../../redux/deviceInfo/deviceSelector';

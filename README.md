@@ -12,9 +12,9 @@ The project was carried out on the basis **Create React App** </br>
 - SCSS/SASS
 
 **The project uses adaptive layout with the following breakpoints:**
-- Mobile (от 375px)
-- Tablet (от 768px)
-- Descktop (от 1200px) - дизайн макета
+- Mobile (from 375px)
+- Tablet (from 768px)
+- Descktop (from 1200px) - layout design
 
 **Layout design:** https://www.figma.com/file/inQl6Jm41xikjUwfDGJsdq/OMNIC_test-(Ukraine)?node-id=0%3A1&mode=dev
 

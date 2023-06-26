@@ -1,25 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchCellAvailability } from "./cellAvailabilityThunk";
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchCellAvailability } from './cellAvailabilityThunk';
 
 const initialState = {
-    cellAvailability: [],
-    isLoading: false,
-}
+  cellAvailability: [],
+  isLoading: false,
+};
 
 const cellAvailabilitySlice = createSlice({
-    name: 'cellAvailability',
-    initialState,
-    reducers: {},
-    extraReducers: builder =>
+  name: 'cellAvailability',
+  initialState,
+  reducers: {},
+  extraReducers: builder =>
     builder
       .addCase(fetchCellAvailability.pending, (state, { payload }) => {
         state.isLoading = true;
       })
-        .addCase(fetchCellAvailability.fulfilled, (state, { payload }) => {
-          console.log(payload.data)
+      .addCase(fetchCellAvailability.fulfilled, (state, { payload }) => {
         state.cellAvailability = payload.data;
-          state.isLoading = false;
-
+        state.isLoading = false;
       })
       .addCase(fetchCellAvailability.rejected, (state, { payload }) => {
         state.isLoading = false;

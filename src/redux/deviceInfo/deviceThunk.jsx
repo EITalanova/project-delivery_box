@@ -1,8 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { DEVICE_UID } from 'api';
-
 axios.defaults.baseURL = 'https://dev.hub.omnic.solutions';
 
 

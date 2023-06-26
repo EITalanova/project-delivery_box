@@ -25,7 +25,6 @@ export const SelectCellSizes = () => {
   const [choiceCell, setChoiceCell] = useState(null);
 
   const { cell_types } = useSelector(selectCellAvailability);
-  console.log(cell_types);
 
   useEffect(() => {
     setCellAvailability(cell_types);

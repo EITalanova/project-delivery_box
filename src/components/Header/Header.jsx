@@ -21,6 +21,7 @@ export const Header = () => {
   useEffect(() => {
     setDeviceInfo(name);
     setId(DEVICE_UID);
+    // eslint-disable-next-line
   }, [DEVICE_UID, name]);
 
   useEffect(() => {

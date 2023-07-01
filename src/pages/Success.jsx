@@ -2,7 +2,7 @@ import successImg from '../assets/images/success.png';
 
 import { Title } from 'components/Title/Title';
 
-import style from './pageStyle/Success.module.scss';
+import style from './styles/Success.module.scss';
 
 const Success = () => {
   return (

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchDeviceInfo } from 'redux/deviceInfo/deviceThunk';
 import { selectDeviceInfo } from '../../redux/deviceInfo/deviceSelector';
 
-import { DEVICE_UID } from 'api';
+import { DEVICE_UID } from 'configs';
 
 import { ReactComponent as Logo } from '../../assets/icon/logo.svg';
 
@@ -33,23 +33,17 @@ export const Header = () => {
       <NavLink to="/" className={style.headerLogo}>
         <Logo />
       </NavLink>
-      <nav>
-        <ul className={style.headerMenu}>
-          <li>
-            <NavLink
-              className={style.headerMenuLinkGrey}
-              to={`/${DEVICE_UID}/instruction`}
-            >
-              ІНСТРУКЦІЯ
-            </NavLink>
-          </li>
-          <li>
-            <Link
-              className={style.headerMenuLink}
-              to="/"
-            >{`Поштомат №${deviceInfo}`}</Link>
-          </li>
-        </ul>
+      <nav className={style.headerMenu}>
+        <NavLink
+          className={style.headerMenuLinkGrey}
+          to={`/${DEVICE_UID}/instruction`}
+        >
+          ІНСТРУКЦІЯ
+        </NavLink>
+        <Link
+          className={style.headerMenuLink}
+          to="/"
+        >{`Поштомат №${deviceInfo}`}</Link>
       </nav>
     </div>
   );

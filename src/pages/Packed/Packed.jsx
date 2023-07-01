@@ -1,25 +1,23 @@
+import { nanoid } from '@reduxjs/toolkit';
+
 import boxImg from '../../assets/images/box.png';
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
 import { Title } from 'components/Title/Title';
-import { DEVICE_UID } from 'api';
+import { DEVICE_UID } from 'configs';
+import instruction from './instructionData.json';
 
 import style from './PackageOptions.module.scss';
 
-export const PackageOptions = () => {
+const Packed = () => {
   return (
     <>
       <Title text="Відправлення має бути надійно упаковане" />
       <div className={style.packageBox}>
         <img src={boxImg} alt="Box" className={style.packageImg} />
         <ol className={style.packageInstruction}>
-          <li>
-            Упакуйте товар у коробку чи пакет. На упаковці не повинно бути
-            сторонніх наклейок та етикеток;
-          </li>
-          <li>
-            Заклейте упаковку скотчем, щоб не було доступу до вкладених
-            предметів;
-          </li>
+          {instruction.steps.map(step => (
+            <li key={nanoid()}>{step}</li>
+          ))}
         </ol>
       </div>
 
@@ -32,3 +30,5 @@ export const PackageOptions = () => {
     </>
   );
 };
+
+export default Packed;

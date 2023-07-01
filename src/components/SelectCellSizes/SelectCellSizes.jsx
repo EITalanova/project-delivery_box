@@ -7,7 +7,7 @@ import { fetchCellAvailability } from '../../redux/cellAvailability/cellAvailabi
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
 import { Title } from 'components/Title/Title';
 import { handlerCellData, sizeMappings } from 'utilites/handlerCellUtils';
-import { DEVICE_UID } from 'api';
+import { DEVICE_UID } from 'configs';
 import style from './SelectCellSizes.module.scss';
 
 export const SelectCellSizes = () => {

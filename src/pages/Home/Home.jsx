@@ -6,11 +6,11 @@ import { Title } from 'components/Title/Title';
 import packageImg from '../../assets/images/package.png';
 import postamatImg from '../../assets/images/postamat.png';
 
-import style from './SendOptions.module.scss';
+import style from './Home.module.scss';
+const Home = () => {
 
-export const SendOptions = () => {
-  return (
-    <>
+    return (
+ <>
       <h1 className={style.homeTitle}>Вітаємо вас!</h1>
             <Title text="Що відправлятимемо сьогодні?" />
       <ul className={style.homeOptionsBox}>
@@ -32,5 +32,7 @@ export const SendOptions = () => {
         </li>
       </ul>
     </>
-  );
+    );
 };
+
+export default Home;

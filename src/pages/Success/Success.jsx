@@ -1,8 +1,8 @@
-import successImg from '../assets/images/success.png';
+import successImg from '../../assets/images/success.png';
 
 import { Title } from 'components/Title/Title';
 
-import style from './styles/Success.module.scss';
+import style from './Success.module.scss';
 
 const Success = () => {
   return (

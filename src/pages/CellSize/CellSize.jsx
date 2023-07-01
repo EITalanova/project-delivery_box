@@ -8,9 +8,9 @@ import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
 import { Title } from 'components/Title/Title';
 import { handlerCellData, sizeMappings } from 'utilites/handlerCellUtils';
 import { DEVICE_UID } from 'configs';
-import style from './SelectCellSizes.module.scss';
+import style from './CellSize.module.scss';
 
-export const SelectCellSizes = () => {
+const CellSize = () => {
   const dispatch = useDispatch();
 
   const [id, setId] = useState(DEVICE_UID);
@@ -22,8 +22,7 @@ export const SelectCellSizes = () => {
   useEffect(() => {
     setCellAvailability(cell_types);
     setId(DEVICE_UID);
-    // eslint-disable-next-line
-  }, [DEVICE_UID, cell_types]);
+  }, [cell_types]);
 
   useEffect(() => {
     dispatch(fetchCellAvailability(id));
@@ -96,3 +95,5 @@ export const SelectCellSizes = () => {
     </div>
   );
 };
+
+export default CellSize;

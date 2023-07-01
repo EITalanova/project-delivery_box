@@ -1,8 +1,8 @@
-import errorImg from '../assets/images/error.png';
+import errorImg from '../../assets/images/error.png';
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
 import { Title } from 'components/Title/Title';
 
-import style from './styles/Error.module.scss';
+import style from './Error.module.scss';
 
 const Error = () => {
   return (

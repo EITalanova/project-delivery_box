@@ -4,12 +4,12 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { DEVICE_UID } from 'configs';
 import { Layout } from './components/Layout/Layout';
 
-const Home = lazy(() => import('./pages/Home'));
+const Home = lazy(() => import('./pages/Home/Home'));
 const Instruction = lazy(() => import('./pages/Instruction/Instruction'));
-const CellSize = lazy(() => import('./pages/CellSize'));
+const CellSize = lazy(() => import('./pages/CellSize/CellSize'));
 const Packed = lazy(() => import('./pages/Packed/Packed'));
-const Error = lazy(() => import('./pages/Error'));
-const Success = lazy(() => import('./pages/Success'));
+const Error = lazy(() => import('./pages/Error/Error'));
+const Success = lazy(() => import('./pages/Success/Success'));
 
 export const App = () => {
   return (

@@ -1,7 +1,7 @@
 import { nanoid } from '@reduxjs/toolkit';
 
 import { Title } from 'components/Title/Title';
-import instruction from './instructionData.json';
+import instruction from './data.json';
 
 import style from './Instruction.module.scss';
 

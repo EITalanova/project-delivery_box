@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDeviceInfo } from 'redux/deviceInfo/deviceThunk';
 import { selectDeviceInfo } from '../../redux/deviceInfo/deviceSelector';
@@ -12,17 +12,14 @@ import style from './Header.module.scss';
 
 export const Header = () => {
   const dispatch = useDispatch();
-
-  const [id, setId] = useState(DEVICE_UID);
-  const [deviceInfo, setDeviceInfo] = useState(null);
-
+  const { id } = useParams();
   const { name } = useSelector(selectDeviceInfo);
+
+  const [deviceInfo, setDeviceInfo] = useState(null);
 
   useEffect(() => {
     setDeviceInfo(name);
-    setId(DEVICE_UID);
-    // eslint-disable-next-line
-  }, [DEVICE_UID, name]);
+  }, [id, name]);
 
   useEffect(() => {
     dispatch(fetchDeviceInfo(id));

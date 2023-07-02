@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import { selectCellAvailability } from '../../redux/cellAvailability/cellAvailabilitySelector';
 import { fetchCellAvailability } from '../../redux/cellAvailability/cellAvailabilityThunk';
@@ -12,16 +13,15 @@ import style from './CellSize.module.scss';
 
 const CellSize = () => {
   const dispatch = useDispatch();
+  const { id } = useParams();
+  const { cell_types } = useSelector(selectCellAvailability);
 
-  const [id, setId] = useState(DEVICE_UID);
   const [cellAvailability, setCellAvailability] = useState([]);
   const [choiceCell, setChoiceCell] = useState(null);
 
-  const { cell_types } = useSelector(selectCellAvailability);
-
   useEffect(() => {
     setCellAvailability(cell_types);
-    setId(DEVICE_UID);
+    // setId(DEVICE_UID);
   }, [cell_types]);
 
   useEffect(() => {

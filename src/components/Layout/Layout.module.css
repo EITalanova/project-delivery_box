@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.generalСontainer {
+.generalContainer {
   display: flex;
   align-items: center;
   flex-direction: column;

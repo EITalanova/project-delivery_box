@@ -4,7 +4,7 @@ import boxImg from '../../assets/images/box.png';
 import { ButtonNavigate } from 'components/ButtonNavigate/ButtonNavigate';
 import { Title } from 'components/Title/Title';
 import { DEVICE_UID } from 'configs';
-import instruction from './instructionData.json';
+import instruction from './data.json';
 
 import style from './PackageOptions.module.scss';
 

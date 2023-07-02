@@ -15,12 +15,12 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigate replace to={`/${DEVICE_UID}`} />} />
-      <Route path={`/${DEVICE_UID}`} element={<Layout />}>
+      <Route path={`/:id`} element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path={`/${DEVICE_UID}/instruction`} element={<Instruction />} />
-        <Route path={`/${DEVICE_UID}/cellsize`} element={<CellSize />} />
-        <Route path={`/${DEVICE_UID}/packed`} element={<Packed />} />
-        <Route path={`/${DEVICE_UID}/success`} element={<Success />} />
+        <Route path={`/:id/instruction`} element={<Instruction />} />
+        <Route path={`/:id/cellsize`} element={<CellSize />} />
+        <Route path={`/:id/packed`} element={<Packed />} />
+        <Route path={`/:id/success`} element={<Success />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

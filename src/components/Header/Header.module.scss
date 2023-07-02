@@ -52,7 +52,7 @@
 
   &:hover,
   &:focus {
-    fill: $aсcentColor;
+    fill: $accentColor;
   }
 }
 
@@ -85,13 +85,13 @@
 
   &:hover,
   &:focus {
-    color: $aсcentColor;
+    color: $accentColor;
   }
 }
 
 .headerMenuLink {
   padding: 20px 0;
-  color: $aсcentColor;
+  color: $accentColor;
   font-size: 12px;
 
   @include tablet {

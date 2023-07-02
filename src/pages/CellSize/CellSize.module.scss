@@ -43,12 +43,12 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 0px 6px 0px $aсcentColor;
+    box-shadow: 0px 0px 6px 0px $accentColor;
   }
 }
 
 .cellTextTitle {
-  color: $aсcentColor;
+  color: $accentColor;
   font-size: 20px;
   font-weight: 700;
 }
@@ -80,8 +80,8 @@
 
   border-radius: 4px;
   background-color: #00cc333c;
-  border: 2px solid $aсcentColor;
-  box-shadow: 0px 0px 6px 0px $aсcentColor;
+  border: 2px solid $accentColor;
+  box-shadow: 0px 0px 6px 0px $accentColor;
   cursor: pointer;
 }
 

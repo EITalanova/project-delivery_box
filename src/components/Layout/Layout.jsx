@@ -12,7 +12,7 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <div className={style.generalСontainer}>
+      <div className={style.generalContainer}>
         <Suspense fallback={<RotatingLines strokeColor="grey" />}>
           <Outlet />
         </Suspense>

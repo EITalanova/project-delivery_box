@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://dev.hub.omnic.solutions';
+import { BASE_URL } from 'configs';
+
+axios.defaults.baseURL = BASE_URL;
 
 
 export const fetchDeviceInfo = createAsyncThunk(

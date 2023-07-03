@@ -17,12 +17,11 @@ jobs:
           npm run lint:js
           npm run build
         env:
-        REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
-        REACT_APP_DEVICE_UID: ${{ secrets.REACT_APP_DEVICE_UID }}
+          REACT_APP_BASE_URL: ${{ secrets.REACT_APP_BASE_URL }}
+          REACT_APP_DEVICE_UID: ${{ secrets.REACT_APP_DEVICE_UID }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           branch: gh-pages
           folder: build

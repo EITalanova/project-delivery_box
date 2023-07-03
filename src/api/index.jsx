@@ -1,3 +1,5 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://dev.hub.omnic.solutions';
+import { BASE_URL } from 'configs';
+
+axios.defaults.baseURL = BASE_URL;

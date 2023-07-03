@@ -10,9 +10,9 @@ const Instruction = () => {
     <>
       <Title text="Інструкція користувача" />
       <ol className={style.instructionList}>
-        {instruction.steps.map(step => (
+        {instruction && (instruction.steps.map(step => (
           <li key={nanoid()}>{step}</li>
-        ))}
+        )))}
       </ol>
     </>
   );

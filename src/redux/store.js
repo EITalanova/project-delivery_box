@@ -11,8 +11,8 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { deviceReducer } from "./deviceSlice";
-import { cellAvailabilityReducer } from "../cellAvailability/cellAvailabilitySlice";
+import { deviceReducer } from "./deviceInfo/deviceSlice";
+import { cellAvailabilityReducer } from "./cellAvailability/cellAvailabilitySlice";
 
 const devicePersistConfig = {
     key: 'deviceName',

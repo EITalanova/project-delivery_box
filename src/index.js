@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { store } from 'redux/deviceInfo/store';
-import { persistor } from 'redux/deviceInfo/store';
+import { store } from 'redux/store';
+import { persistor } from 'redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { App } from 'App';
 import './sass/main.scss';

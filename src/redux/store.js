@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -11,17 +11,17 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import { deviceReducer } from "./deviceInfo/deviceSlice";
-import { cellAvailabilityReducer } from "./cellAvailability/cellAvailabilitySlice";
+import { deviceReducer } from './deviceInfo/deviceSlice';
+import { cellAvailabilityReducer } from './cellAvailability/cellAvailabilitySlice';
 
 const devicePersistConfig = {
-    key: 'deviceName',
-    storage
+  key: 'deviceName',
+  storage,
 };
 
 const cellAvailabilityPersistConfig = {
-    key: 'cellAvailability',
-    storage
+  key: 'cellAvailability',
+  storage,
 };
 
 const middleware = [
@@ -33,11 +33,14 @@ const middleware = [
 ];
 
 export const store = configureStore({
-    reducer: {
-        deviceName: persistReducer(devicePersistConfig, deviceReducer),
-        cellAvailability: persistReducer(cellAvailabilityPersistConfig, cellAvailabilityReducer)
-    },
-    middleware,
+  reducer: {
+    deviceName: persistReducer(devicePersistConfig, deviceReducer),
+    cellAvailability: persistReducer(
+      cellAvailabilityPersistConfig,
+      cellAvailabilityReducer
+    ),
+  },
+  middleware,
 });
 
 export const persistor = persistStore(store);
